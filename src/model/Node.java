@@ -17,6 +17,14 @@ public class Node {
         return next;
     }
 
+    public void deleteElements() {
+        Node current = this;
+        while (current.next.next != null) {
+            current = current.next;
+        }
+        current.next = null;
+    }
+
     public void add(int value) {
         Node current = this;
         while (current.next != null) {
