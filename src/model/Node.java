@@ -17,7 +17,7 @@ public class Node {
         return next;
     }
 
-    public void deleteElements() {
+    public void removeLast() {
         Node current = this;
         while (current.next.next != null) {
             current = current.next;

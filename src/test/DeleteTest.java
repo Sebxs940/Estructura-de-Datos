@@ -10,7 +10,7 @@ public class DeleteTest {
         node.add(3);
         node.add(12);
 
-        node.deleteElements();
+        node.removeLast();
 
         Node root = node;
         while (root != null) {
