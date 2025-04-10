@@ -1,38 +1,34 @@
 package model;
 
-public class Node {
-    private int value;
-    private Node next;
+public class Node<T> {
+    private T value;
+    private Node<T> next;
 
-    public Node(int value, Node next) {
+    public Node() {
+        this.value = null;
+        this.next = null;
+    }
+
+    public Node(T value, Node<T> next) {
         this.value = value;
         this.next = next;
     }
 
-    public int getValue() {
-        return value;
-    }
-
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void removeLast() {
-        Node current = this;
-        while (current.next.next != null) {
-            current = current.next;
-        }
-        current.next = null;
+    public void setNext(Node<T> next) {
+        this.next = next;
     }
 
-    public void add(int value) {
-        Node current = this;
-        while (current.next != null) {
-            current = current.next;
-        }
-        current.next = new Node(value, null);
+    public T getValue() {
+        return value;
     }
 
+    public void setValue(T value) {
+        this.value = value;
+    }
 
     @Override
     public String toString() {
