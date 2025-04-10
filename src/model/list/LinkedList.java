@@ -34,6 +34,23 @@ public class LinkedList<T> {
         size++;
     }
 
+    public void removePosition(int position){
+        if (head == null){
+            return;
+        } Node temp = head;
+        if (position == 0){
+            head = temp.getNext();
+            size --;
+            return;
+        } for (int i = 0; temp != null && i < position - 1; i++) {
+            temp = temp.getNext();
+        }
+        if (temp == null || temp.getNext() == null){
+            return;
+        }
+        temp.setNext(temp.getNext().getNext());
+    }
+
     public void removeLast() {
         if (isEmpty()) {
             throw new EmptyStackException();
@@ -51,20 +68,21 @@ public class LinkedList<T> {
     }
 
     public T get(int pos){
+
+        if (pos < 0 || pos >= size){
+            throw new ArrayIndexOutOfBoundsException("Invalid position");
+        }
+
         int i = 0;
-        T value = null;
         Node<T> node = this.head;
+
         while (node != null) {
             if (pos == i) {
-                value = node.getValue();
-                break;
+                return node.getValue();
             }
             node = node.getNext();
             i++;
         }
-        if (value == null) {
-            throw new ArrayIndexOutOfBoundsException("Invalid position");
-        }
-        return value;
+        return null;
     }
 }
