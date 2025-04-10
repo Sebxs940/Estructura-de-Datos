@@ -1,12 +1,12 @@
-package test;
+package view;
 
 import model.Node;
 
-public class ValueFirstNodeTest {
+public class ValueFirstNodeView {
     public static void main(String[] args) {
-        Node a = new Node(6, null);
+        Node a = new Node("pepe", null);
         Node b = new Node(8, a);
-        Node c = new Node(4, b);
+        Node c = new Node(true, b);
         Node d = new Node(9, c);
 
         System.out.println(d);
