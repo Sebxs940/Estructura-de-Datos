@@ -17,6 +17,23 @@ public class Node {
         return next;
     }
 
+    public void removeLast() {
+        Node current = this;
+        while (current.next.next != null) {
+            current = current.next;
+        }
+        current.next = null;
+    }
+
+    public void add(int value) {
+        Node current = this;
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = new Node(value, null);
+    }
+
+
     @Override
     public String toString() {
         return "Node{" +
