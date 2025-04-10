@@ -34,7 +34,7 @@ public class LinkedList<T> {
         size++;
     }
 
-    public void removePosition(int position){
+    public void remove(int position){
         if (head == null){
             return;
         } Node temp = head;
