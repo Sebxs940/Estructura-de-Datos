@@ -13,8 +13,8 @@ public class DeleteLinkedListView {
         for (int i = 0; i < names.getSize(); i++) {
             System.out.println(names.get(i));
         }
-
         names.removeLast();
+        names.remove(0);
 
         System.out.println("Size names: " + names.getSize());
         for (int i = 0; i < names.getSize(); i++) {
