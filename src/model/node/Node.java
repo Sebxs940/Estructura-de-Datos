@@ -1,4 +1,4 @@
-package model;
+package model.node;
 
 public class Node<T> {
     private T value;

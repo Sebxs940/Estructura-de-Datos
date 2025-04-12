@@ -1,6 +1,6 @@
-package view;
+package view.node;
 
-import model.Node;
+import model.node.Node;
 
 public class ValueFirstNodeView {
     public static void main(String[] args) {
