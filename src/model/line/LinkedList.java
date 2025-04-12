@@ -1,4 +1,4 @@
-package model.list;
+package model.line;
 
 import model.node.Node;
 
