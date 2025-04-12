@@ -1,6 +1,8 @@
-package view.list;
+package view.line;
 
-import model.list.DLinkedList;
+import model.line.DLinkedList;
+
+import java.util.Scanner;
 
 public class DoubleLinkedListView {
     public static void main(String[] args) {

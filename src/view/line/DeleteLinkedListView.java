@@ -1,6 +1,6 @@
-package view.list;
+package view.line;
 
-import model.list.LinkedList;
+import model.line.LinkedList;
 
 public class DeleteLinkedListView {
     public static void main(String[] args) {

@@ -1,7 +1,6 @@
-package model.list;
+package model.line;
 
 import model.node.DNode;
-import model.node.Node;
 
 public class DLinkedList<T> {
     private DNode<T> head;
